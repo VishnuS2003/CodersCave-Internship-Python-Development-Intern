@@ -1,0 +1,33 @@
+def add (x, y):
+    return x + y
+def difference (x, y):
+    return x-y
+def product (x, y):
+    return x * y
+def divident(x, y):
+    if y == 0:
+        return "Cannot divide by zero"
+    return x / y
+while True:
+    print("Options:")
+    print("Enter 'add' for addition")
+    print("Enter 'difference' for subtraction")
+    print("Enter 'product' for multiplication")
+    print("Enter 'divident' for division")
+    print("Enter 'quit' to end the program") 
+    user_input = input(": ")
+    if user_input == "quit":
+        break
+    elif user_input in ("add", "difference", "product", "divident"):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        if user_input == "add":
+            print("Result:", add(num1, num2))
+        elif user_input == "difference":
+            print("Result:", difference(num1, num2))
+        elif user_input == "product":
+            print("Result:", product(num1, num2))
+        elif user_input == "divident":
+            print("Result:", divident(num1, num2))
+    else:
+        print("Invalid input")
